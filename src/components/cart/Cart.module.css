@@ -1,0 +1,54 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.empty{
+    padding-top:200px ;
+    text-align: center;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(255, 235, 205, 0.758);
+    border-radius: 10px;
+    gap: 50px;
+    margin-top: 15px;
+}
+
+.card__left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img{
+    width: 100%;   
+}
+
+.figure{
+    width: 60%;
+    border-radius: 10px;
+}
+
+.card__right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.counter__part{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.price{
+    font-weight: bold;
+    padding-right: 20px;
+}

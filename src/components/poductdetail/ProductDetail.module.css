@@ -1,0 +1,47 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.card {
+    display: flex;
+    gap: 30px;
+    background-color: rgba(255, 145, 0, 0.214);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.img {
+    width: 100%;
+    background-color: beige;
+    border-radius: 10px;
+}
+
+.figure {
+    width: 50%;
+}
+
+.card__right {
+    width: 90%;
+}
+
+.desc {
+    padding: 15px 0;
+}
+
+.price,
+.rating,
+.stock,
+.warranty,
+.weight {
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.counter__part {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
