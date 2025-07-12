@@ -2,12 +2,19 @@ import React from 'react'
 import styles from "./Login.module.css"
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = (data) => console.log(data)
+    const navigate = useNavigate();
+
+    const handleLogin = (data) => {
+    const userData = {email: data.email, isLoggedIn: true,};
+    localStorage.setItem("userData", JSON.stringify(userData));
+    navigate("/cart");
+    };
 
 
     return (
@@ -15,7 +22,7 @@ function Login() {
 
             <h1>Login</h1>
 
-            <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            <form className={styles.form} onSubmit={handleSubmit(handleLogin)}>
 
                 {/* email */}
                 <div className={styles.form__field}>
