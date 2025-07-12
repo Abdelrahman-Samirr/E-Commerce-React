@@ -11,10 +11,16 @@ function Login() {
     const navigate = useNavigate();
 
     const handleLogin = (data) => {
-    const userData = {email: data.email, isLoggedIn: true,};
-    localStorage.setItem("userData", JSON.stringify(userData));
-    navigate("/cart");
-    };
+        const registeredUser = JSON.parse(localStorage.getItem("registeredUser"));
+        
+        if (registeredUser && registeredUser.email === data.email && registeredUser.password === data.password) {
+            const userData = { email: data.email, isLoggedIn: true, };
+            localStorage.setItem("userData", JSON.stringify(userData));
+            navigate("/cart");
+        } else {
+            alert("Invalid email or password");
+        }
+    }
 
 
     return (

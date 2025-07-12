@@ -24,3 +24,8 @@
   display: flex;
   gap: 15px;
 }
+
+.login__part{
+  display: flex;
+  gap: 15px;
+}
