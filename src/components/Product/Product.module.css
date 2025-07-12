@@ -27,6 +27,14 @@
     position: absolute;
     right: 5%;
     top: 2%;
+    scale: 1.2;
+}
+.addIcon{
+    cursor: pointer;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    scale: 1.2;
 }
 
 .header__card{

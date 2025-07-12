@@ -2,6 +2,9 @@ import styles from "./Product.module.css"
 import { useContext } from "react";
 import { CounterContext } from "../../context/context";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { toggleWishlistState } from "../../store/slice";
 
 function Product({ product, addToList }) {
 
@@ -28,6 +31,14 @@ function Product({ product, addToList }) {
     return stars;
   };
 
+  const dispatch = useDispatch();
+
+  const wishlist = useSelector((state) => state.counter.wishlist)
+  const isInWishlist = wishlist.includes(product.id)
+
+  const handleWishlist = () => {
+    dispatch(toggleWishlistState(product.id))
+  }
 
   return (
     <>
@@ -37,7 +48,12 @@ function Product({ product, addToList }) {
             <img className={styles.img} src={product.thumbnail} alt={product.title} />
           </figure>
         </Link>
-        <div className={styles.wishIcon} onClick={() => { addToList(product.title) }}><i className="fa-solid fa-heart"></i></div>
+        <div className={styles.addIcon} onClick={() => { addToList(product.title) }}><i class="fa-solid fa-square-plus"></i></div>
+        <div className={styles.wishIcon} onClick={handleWishlist}>
+          {isInWishlist ? (<i class="fa-solid fa-heart"></i>) :
+            (<i class="fa-regular fa-heart"></i>)
+          }
+        </div>
 
         <div className={styles.header__card}>
           <h4>{product.title}</h4>
