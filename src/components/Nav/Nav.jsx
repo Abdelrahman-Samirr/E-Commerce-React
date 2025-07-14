@@ -24,7 +24,7 @@ function Nav() {
           <NavLink to="/" className={({ isActive }) => `${styles.home} ${isActive ? styles.active_link : ""}`}>My App </NavLink>
           <div className={styles.nav__right}>
             <NavLink to="/" className={({ isActive }) => `${styles.home} ${isActive ? styles.active_link : ""}`}>Home </NavLink>
-            <h4 className={styles.wishlist}>Wishlist <span>({counter})</span></h4>
+            <NavLink to="/wishlist" className={({ isActive }) => `${styles.cart} ${isActive ? styles.active_link : ""}`}>Wishlist ({counter})</NavLink>
             <NavLink to="/cart" className={({ isActive }) => `${styles.cart} ${isActive ? styles.active_link : ""}`}>🛒 Cart ({count})</NavLink>
           </div>
           {isLoggedIn ? (<NavLink to="/login" onClick={handleLogout}>Logout</NavLink>) : (

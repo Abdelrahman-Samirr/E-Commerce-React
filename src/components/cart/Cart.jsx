@@ -15,7 +15,7 @@ function Cart() {
         {console.log(cartItems)}
 
         {cartItems?.length === 0 ? (
-          <h2 className={styles.empty}>No items in the cart.</h2>
+          <h2 className={styles.empty}>No items in Cart.</h2>
         ) : (
           cartItems?.map((item) => (
             <div key={item.id} className={styles.card}>

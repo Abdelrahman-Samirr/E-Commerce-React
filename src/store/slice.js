@@ -10,14 +10,14 @@ const counterSlice = createSlice({
   initialState,
   reducers: {
     toggleWishlistState: (state, action) => {
-      const productId = action.payload;
-      const exists = state.wishlist.includes(productId);
+      const product = action.payload;
+      const exists = state.wishlist.find((item) => item.id === product.id);
 
       if(exists){
-        state.wishlist = state.wishlist.filter((id) => id !== productId)
+        state.wishlist = state.wishlist.filter((item) => item.id !== product.id)
         state.counter = state.counter - 1
       }else{
-        state.wishlist.push(productId)
+        state.wishlist.push(product)
         state.counter = state.counter + 1
       }
     },

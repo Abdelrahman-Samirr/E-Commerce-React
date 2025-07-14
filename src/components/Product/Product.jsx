@@ -34,10 +34,10 @@ function Product({ product, addToList }) {
   const dispatch = useDispatch();
 
   const wishlist = useSelector((state) => state.counter.wishlist)
-  const isInWishlist = wishlist.includes(product.id)
+  const isInWishlist = wishlist.some((item) => item.id === product.id);
 
   const handleWishlist = () => {
-    dispatch(toggleWishlistState(product.id))
+    dispatch(toggleWishlistState(product))
   }
 
   return (
@@ -48,10 +48,10 @@ function Product({ product, addToList }) {
             <img className={styles.img} src={product.thumbnail} alt={product.title} />
           </figure>
         </Link>
-        <div className={styles.addIcon} onClick={() => { addToList(product.title) }}><i class="fa-solid fa-square-plus"></i></div>
+        <div className={styles.addIcon} onClick={() => { addToList(product.title) }}><i className="fa-solid fa-square-plus"></i></div>
         <div className={styles.wishIcon} onClick={handleWishlist}>
-          {isInWishlist ? (<i class="fa-solid fa-heart"></i>) :
-            (<i class="fa-regular fa-heart"></i>)
+          {isInWishlist ? (<i className="fa-solid fa-heart"></i>) :
+            (<i className="fa-regular fa-heart"></i>)
           }
         </div>
 
