@@ -1,4 +1,4 @@
-.container{
+.container {
     width: 80%;
     margin: 0 auto;
     height: 100vh;
@@ -35,7 +35,7 @@
     border: solid 2px black;
 }
 
-.login {
+.login__btn {
     width: 100%;
     font-size: 22px;
     color: #ffff;
@@ -47,16 +47,16 @@
     cursor: pointer;
 }
 
-.login:hover{
+.login__btn:hover {
     background-color: rgba(0, 112, 0, 0.878);
     transition: all 0.3s;
 }
 
-.form__field p{
+.form__field p {
     color: rgba(255, 0, 0, 0.707);
 }
 
-.form .link{
+.form .link {
     display: block;
     font-weight: bold;
     font-size: 24px;
@@ -66,8 +66,31 @@
     color: rgba(0, 0, 0, 0.84);
     width: 100%;
 }
-.form .link span{
+
+.form .link span {
     font-weight: bolder;
     text-decoration: underline;
 }
 
+@media (max-width: 431px) {
+    .form {
+        width: 100%;
+    }
+
+    .login__header {
+        font-size: 32px;
+    }
+
+    .form__field label {
+        font-size: 18px;
+    }
+
+    .login__btn {
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .form .link {
+        font-size: 18px;
+    }
+}

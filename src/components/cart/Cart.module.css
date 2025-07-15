@@ -1,15 +1,15 @@
-.container{
+.container {
     width: 80%;
     margin: 0 auto;
     height: 100vh;
 }
 
-.empty{
-    padding-top:200px ;
+.empty {
+    padding-top: 200px;
     text-align: center;
 }
 
-.card{
+.card {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,35 +20,55 @@
     margin-top: 15px;
 }
 
-.card__left{
+.card__left {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.img{
-    width: 100%;   
+.img {
+    width: 100%;
 }
 
-.figure{
+.figure {
     width: 60%;
     border-radius: 10px;
 }
 
-.card__right{
+.card__right {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 40%;
 }
 
-.counter__part{
+.counter__part {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.price{
+.price {
     font-weight: bold;
     padding-right: 20px;
+}
+
+@media (max-width: 431px) {
+    .card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card__left {
+        flex-direction: column;
+    }
+
+    .figure {
+        margin: 0 auto;
+    }
+    .card__right{
+        flex-direction: column-reverse;
+        gap: 15px;
+        width: 100%;
+    }
 }

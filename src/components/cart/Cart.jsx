@@ -20,7 +20,7 @@ function Cart() {
           cartItems?.map((item) => (
             <div key={item.id} className={styles.card}>
               <div className={styles.card__left}>
-                <Link to={`/product/${item.id}`} state={{ product: item }}>
+                <Link className={styles.link__img} to={`/product/${item.id}`} state={{ product: item }}>
                   <figure className={styles.figure}><img className={styles.img} src={item.thumbnail} alt={item.title} /></figure>
                 </Link>
                 <h3>{item.title}</h3>

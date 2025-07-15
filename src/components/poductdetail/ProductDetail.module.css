@@ -25,6 +25,15 @@
 
 .card__right {
     width: 90%;
+    position: relative;
+}
+
+.wishIcon {
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    scale: 1.2;
 }
 
 .desc {
@@ -44,4 +53,29 @@
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+@media (max-width: 431px) {
+    .container {
+        height: 100%;
+        margin-top: 30px;
+    }
+
+    .card {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .figure {
+        width: 100%;
+    }
+
+    .card__right {
+        position: static;
+    }
+
+    .wishIcon {
+        left: 17%;
+        top: 3.5%;
+    }
 }

@@ -34,7 +34,7 @@
     border: solid 2px black;
 }
 
-.register {
+.register__btn {
     width: 100%;
     font-size: 22px;
     color: #ffff;
@@ -46,7 +46,7 @@
     cursor: pointer;
 }
 
-.register:hover{
+.register__btn:hover{
     background-color: rgba(10, 10, 253, 0.768);
 }
 
@@ -67,4 +67,23 @@
 .form .link span{
     font-weight: bolder;
     text-decoration: underline;
+}
+
+@media (max-width: 431px) {
+    .form{
+        width: 100%;
+    }
+    .register__header{
+        font-size: 32px;
+    }
+    .form__field label{
+        font-size: 18px;
+    }
+    .register__btn{
+        font-size: 18px;
+        margin-top: 0;
+    }
+    .form .link{
+        font-size: 18px;
+    }
 }

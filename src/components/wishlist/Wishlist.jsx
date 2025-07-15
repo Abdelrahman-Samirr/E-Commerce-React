@@ -1,15 +1,11 @@
-import React from 'react'
 import styles from './Wishlist.module.css'
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from 'react-router-dom';
 import { toggleWishlistState } from '../../store/slice';
 
 function Wishlist() {
 
-
     const dispatch = useDispatch();
     const wishlist = useSelector((state) => state.counter.wishlist);
-
 
 
     return (

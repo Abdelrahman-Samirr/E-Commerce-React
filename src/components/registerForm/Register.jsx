@@ -18,7 +18,7 @@ function Register() {
 
     return (
         <div className={styles.container}>
-            <h1>Register</h1>
+            <h1 className={styles.register__header}>Register</h1>
             <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 
                 {/* username */}
@@ -85,7 +85,7 @@ function Register() {
                         {...register("address")} />
                 </div>
 
-                <button className={styles.register} type="submit">Register</button>
+                <button className={styles.register__btn} type="submit">Register</button>
 
                 <Link to="/login" className={styles.link}>Already have account? <span>Login</span></Link>
             </form>

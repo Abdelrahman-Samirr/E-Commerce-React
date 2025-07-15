@@ -16,7 +16,7 @@ function Login() {
         if (registeredUser && registeredUser.email === data.email && registeredUser.password === data.password) {
             const userData = { email: data.email, isLoggedIn: true, };
             localStorage.setItem("userData", JSON.stringify(userData));
-            navigate("/cart");
+            navigate("/");
         } else {
             alert("Invalid email or password");
         }
@@ -26,7 +26,7 @@ function Login() {
     return (
         <div className={styles.container}>
 
-            <h1>Login</h1>
+            <h1 className={styles.login__header}>Login</h1>
 
             <form className={styles.form} onSubmit={handleSubmit(handleLogin)}>
 
@@ -54,7 +54,7 @@ function Login() {
                     {errors.password && <p>* {errors.password.message} *</p>}
                 </div>
 
-                <button type="submit" className={styles.login}>Login</button>
+                <button type="submit" className={styles.login__btn}>Login</button>
 
                 <Link to="/register" className={styles.link}>Don't have account? <span>Register</span></Link>
 

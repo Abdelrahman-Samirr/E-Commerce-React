@@ -1,13 +1,13 @@
-.container{
-    width: 80%;
-    margin: 0 auto;
-    padding: 11px 0;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 11px 0;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.nav{
+.nav {
   background-color: rgb(216, 216, 216);
   position: sticky;
   width: 100vw;
@@ -20,12 +20,62 @@
   font-weight: bold;
 }
 
-.nav__right{
+.nav__right {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+}
+
+.nav__middle {
   display: flex;
   gap: 40px;
 }
 
-.login__part{
+.login__part {
   display: flex;
   gap: 15px;
+}
+
+
+.toggleButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile  */
+@media (max-width: 431px) {
+  .container{
+    align-items: center;
+  }
+  .toggleButton {
+    display: block;
+    scale: 0.5;
+  }
+
+  .nav__right {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ddd;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    padding: 15px;
+    border-radius: 5px;
+    width: 35%;
+  }
+
+  .nav__right.show {
+    display: flex;
+  }
+
+  .login__part, .nav__middle{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
 }
